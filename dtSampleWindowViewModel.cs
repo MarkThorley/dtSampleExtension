@@ -1,22 +1,14 @@
 ﻿using System;
 using Dynamo.Core;
 using Dynamo.Extensions;
-using Dynamo.Graph.Nodes;
-using System.Windows;
-using Dynamo.ViewModels;
-using Dynamo.Models;
-using System.Linq;
-using Dynamo.Graph.Nodes.ZeroTouch;
-using Dynamo.Wpf.Extensions;
-using System.IO;
 
 namespace dtSampleExtension
 {
     public class dtSampleWindowViewModel : NotificationObject, IDisposable
     {
+
         private ReadyParams readyParams;
 
-        // Displays active nodes in the workspace
         public ReadyParams ReadyParamType
         {
             get
@@ -26,7 +18,6 @@ namespace dtSampleExtension
             }
         }
 
-        // Helper function that builds string of active nodes
         public ReadyParams getReadyParams()
         {
             return readyParams;
