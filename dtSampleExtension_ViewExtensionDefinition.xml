@@ -1,0 +1,4 @@
+﻿<ViewExtensionDefinition>
+  <AssemblyPath>..\dtSampleExtension.dll</AssemblyPath>
+  <TypeName>dtSampleExtension.dtSampleExtension</TypeName>
+</ViewExtensionDefinition>
