@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Dynamo.Wpf.Extensions;
-using System.Windows;
 using System.Windows.Controls;
 using Dynamo.ViewModels;
 
@@ -67,7 +62,6 @@ namespace dtSampleExtension
                 return "BILT EUR 2018";
             }
         }
-
     }
 }
 
