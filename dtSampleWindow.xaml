@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:dtSampleExtension"
              mc:Ignorable="d"
             Width="160"
-         ResizeMode="NoResize" Title="Freeze/Unfreeze" SizeToContent="Height" Icon="resources\designtech-icon-32px.ico">
+         ResizeMode="NoResize" Title="Toggle Freeze" SizeToContent="Height" Icon="resources\designtech-icon-32px.ico">
     <Grid Name="MainGrid" 
           HorizontalAlignment="Stretch"
           VerticalAlignment="Stretch">
