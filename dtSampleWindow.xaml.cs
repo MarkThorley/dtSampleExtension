@@ -34,7 +34,38 @@ namespace dtSampleExtension
             }
         }
 
-        private void ButtonClick_UnfreezeAll(object sender, RoutedEventArgs e)
+        private void ButtonClick_UnFreezeSelected(object sender, RoutedEventArgs e)
+        {
+            FrameworkElement fe = sender as FrameworkElement;
+            dtSampleWindowViewModel se = fe.DataContext as dtSampleWindowViewModel;
+            ReadyParams rp = se.ReadyParamType;
+            var vlp = rp as ViewLoadedParams;
+            var wm = rp.CurrentWorkspaceModel;
+
+            foreach (NodeModel node in wm.Nodes)
+            {
+                if (node.IsSelected)
+                {
+                    node.IsFrozen = false;
+                }
+            }
+        }
+
+        private void ButtonClick_FreezeAll(object sender, RoutedEventArgs e)
+        {
+            FrameworkElement fe = sender as FrameworkElement;
+            dtSampleWindowViewModel se = fe.DataContext as dtSampleWindowViewModel;
+            ReadyParams rp = se.ReadyParamType;
+            var vlp = rp as ViewLoadedParams;
+            var wm = rp.CurrentWorkspaceModel;
+
+            foreach (NodeModel node in wm.Nodes)
+            {
+                node.IsFrozen = true;
+            }
+        }
+
+        private void ButtonClick_UnFreezeAll(object sender, RoutedEventArgs e)
         {
             FrameworkElement fe = sender as FrameworkElement;
             dtSampleWindowViewModel se = fe.DataContext as dtSampleWindowViewModel;
