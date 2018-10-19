@@ -21,62 +21,28 @@ namespace dtSampleExtension
         {
             FrameworkElement fe = sender as FrameworkElement;
             dtSampleWindowViewModel se = fe.DataContext as dtSampleWindowViewModel;
-            ReadyParams rp = se.ReadyParamType;
-            var vlp = rp as ViewLoadedParams;
-            var wm = rp.CurrentWorkspaceModel;
-
-            foreach (NodeModel node in wm.Nodes)
-            {
-                if (node.IsSelected)
-                {
-                    node.IsFrozen = true;
-                }
-            }
+            se.FreezeSelected(se);
         }
 
         private void ButtonClick_UnFreezeSelected(object sender, RoutedEventArgs e)
         {
             FrameworkElement fe = sender as FrameworkElement;
             dtSampleWindowViewModel se = fe.DataContext as dtSampleWindowViewModel;
-            ReadyParams rp = se.ReadyParamType;
-            var vlp = rp as ViewLoadedParams;
-            var wm = rp.CurrentWorkspaceModel;
-
-            foreach (NodeModel node in wm.Nodes)
-            {
-                if (node.IsSelected)
-                {
-                    node.IsFrozen = false;
-                }
-            }
+            se.UnFreezeSelected(se);
         }
 
         private void ButtonClick_FreezeAll(object sender, RoutedEventArgs e)
         {
             FrameworkElement fe = sender as FrameworkElement;
             dtSampleWindowViewModel se = fe.DataContext as dtSampleWindowViewModel;
-            ReadyParams rp = se.ReadyParamType;
-            var vlp = rp as ViewLoadedParams;
-            var wm = rp.CurrentWorkspaceModel;
-
-            foreach (NodeModel node in wm.Nodes)
-            {
-                node.IsFrozen = true;
-            }
+            se.FreezeAll(se);
         }
 
         private void ButtonClick_UnFreezeAll(object sender, RoutedEventArgs e)
         {
             FrameworkElement fe = sender as FrameworkElement;
             dtSampleWindowViewModel se = fe.DataContext as dtSampleWindowViewModel;
-            ReadyParams rp = se.ReadyParamType;
-            var vlp = rp as ViewLoadedParams;
-            var wm = rp.CurrentWorkspaceModel;
-
-            foreach (NodeModel node in wm.Nodes)
-            {
-                node.IsFrozen = false;
-            }
+            se.UnFreezeAll(se);
         }
 
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
